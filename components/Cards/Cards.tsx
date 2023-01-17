@@ -19,7 +19,7 @@ let items = props.onTitle.subCategory;
         })}
       </ListGroup>
       <Card.Body>
-      <CustomButton onClick={() => console.log("tab")}>Get Started</CustomButton>
+      <CustomButton onClick={() => console.log("tab")}>Register for free</CustomButton>
       </Card.Body>
     </Card>
   );
