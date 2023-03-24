@@ -83,7 +83,7 @@ const DoubleInput: React.FC<DoubleInputProps> = ({
                 return (
                   <li
                     key={idd}
-                    onClick={() => getClickedData1(val)}
+                    onClick={() => getClickedData1(val.toString())}
                     className={SelectedData1 === val ? classes.tabActive : ""}
                   >
                     <span>{val}</span>
@@ -111,7 +111,7 @@ const DoubleInput: React.FC<DoubleInputProps> = ({
                 return (
                   <li
                     key={idd}
-                    onClick={() => getClickedData2(val)}
+                    onClick={() => getClickedData2(val.toString())}
                     className={SelectedData2 === val ? classes.tabActive : ""}
                   >
                     {ToData.length >= 1 ? (

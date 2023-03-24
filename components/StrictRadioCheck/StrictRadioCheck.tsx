@@ -12,7 +12,7 @@ const StrictRadioCheck: React.FC<StrictRadioCheckProps> = ({
   const [selectedSwitches, setSelectedSwitches] =
     useState<string[]>(defaultValue);
   const switches = [
-    "Age",
+    "age",
     "height",
     "country",
     "state",

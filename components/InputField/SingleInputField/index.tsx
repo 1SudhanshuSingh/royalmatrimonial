@@ -25,9 +25,10 @@ const SingleInput: React.FC<MyComponentProps> = ({
   const [activeList, setActiveList] = useState<boolean>(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
+  // For removeing the selcted item if Does not Matter is selected
   useEffect(() => {
-    if (HostedArray.includes("0")&& HostedArray.length > 1 ) {
-      updateHostedArray(["0"])
+    if (HostedArray.includes("0") && HostedArray.length > 1) {
+      updateHostedArray(["0"]);
     }
   }, [HostedArray]);
 

@@ -57,31 +57,25 @@ const CountryMultiple: React.FC<CountryProps> = ({
   };
 
   // For removeing the selcted item if Does not Matter is selected
-  const DoesNotMatterHandle = () => {
-    // console.log(countriesIds,"DoesNotMatterHandle Before");
-
-    if (countriesIds.length > 0 && countriesIds.includes(0)) {
-      // console.log("DoesNotMatterHandle After");
-
-      setCountriesIds([]);
+  useEffect(() => {
+    console.log(countriesIds, "Useeffect after getclicked");
+    if (countriesIds.length > 1 && countriesIds.includes(0)) {
       setCountriesIds([0]);
       updateHostedArray([searchHostedArray[0]]);
     }
-  };
+  }, [countriesIds]);
+
   const getClickedData = useCallback(
     (country: ICountry, countryIndex: number) => {
       if (!HostedArray.some((item) => Object.is(item, country))) {
-        console.log(countriesIds, "countriesIds Before getclicked");
         setCountriesIds((pre) => [...pre, countryIndex]);
         updateHostedArray((prevArray) => [...prevArray, country]);
-        console.log(countriesIds, "countriesIds after getclicked");
-        DoesNotMatterHandle();
         setSearchInput("");
         UpdatesearchHostedArray(countries);
       }
       onChangeCountry([...countriesIds, countryIndex]);
     },
-    [HostedArray, countriesIds, onChangeCountry]
+    [HostedArray, onChangeCountry]
   );
 
   const getClickedDeleteData = (isoCode: string, item: ModifiedDataCountry) => {

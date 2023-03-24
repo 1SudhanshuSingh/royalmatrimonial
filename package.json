@@ -56,6 +56,7 @@
     "yup": "^1.0.0"
   },
   "devDependencies": {
-    "@types/brainhubeu__react-carousel": "^2.0.5"
+    "@types/brainhubeu__react-carousel": "^2.0.5",
+    "@types/react-circular-progressbar": "^1.1.0"
   }
 }

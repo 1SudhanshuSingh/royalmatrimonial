@@ -339,14 +339,14 @@ const DesiredProfilePage: React.FC = () => {
                     disabled
                   />
                 </div>
-                <StrictRadioCheck
-                  onSetFilters={setFilters}
-                  defaultValue={jsonData?.mandatory_fields || []}
-                />
                 <Button className="mb-5 mt-3 mx-auto" onClick={savePartnerPref}>
                   Save your preferrence
                 </Button>
               </form>
+              <StrictRadioCheck
+                onSetFilters={setFilters}
+                defaultValue={jsonData?.mandatory_fields || []}
+              />
             </Col>
           </Row>
         </Container>
